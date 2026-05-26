@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GL Solutions — Spec Driven Development para B2B SaaS y Fintech</title>
+  <meta name="description" content="Construimos software auditado y transferible para startups seed en Chile y LatAm. Spec antes que código. IA bajo control de ingenieros con 15+ años de experiencia." />
+  <meta property="og:title" content="GL Solutions — Spec Driven Development" />
+  <meta property="og:description" content="Software que puedes auditar, transferir y escalar. Para startups B2B SaaS y Fintech en etapa seed." />
+  <meta property="og:url" content="https://glsolutions.tech" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500&display=swap" /></noscript>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link visually-hidden">Ir al contenido principal</a>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" aria-label="Navegación principal">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">GL<span>Solutions</span></a>
+      <ul class="nav__links">
+        <li><a href="#problema">El problema</a></li>
+        <li><a href="#solucion">SDD</a></li>
+        <li><a href="#evidencia">Evidencia</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto" class="nav__cta">Escribir →</a></li>
+      </ul>
+      <button class="nav__burger" id="burger" aria-label="Menú" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu" aria-hidden="true">
+      <a href="#problema">El problema</a>
+      <a href="#solucion">SDD</a>
+      <a href="#evidencia">Evidencia</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">hola@glsolutions.tech</a>
+    </div>
+  </nav>
+
+  <main id="main-content" tabindex="-1">
+
+  <!-- S1: HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero__grid">
+      <div class="hero__label animate-in" style="--d:0ms">
+        <span class="pill">B2B SaaS · Fintech · Seed / Pre-seed</span>
+      </div>
+
+      <h1 class="hero__h1 animate-in" style="--d:80ms">
+        Software que puedes<br/>
+        <em>auditar, transferir</em><br/>
+        y escalar.
+      </h1>
+
+      <p class="hero__sub animate-in" style="--d:160ms">
+        Construimos sistemas para startups en cualquier parte del mundo usando Spec Driven Development — la metodología que pone la especificación antes del código y la IA donde acelera sin perder el control.
+      </p>
+
+      <div class="hero__cta animate-in" style="--d:240ms">
+        <a href="mailto:hola@glsolutions.tech" class="btn btn--primary">
+          hola@glsolutions.tech
+        </a>
+        <a href="#evidencia" class="btn btn--ghost">Ver un ejemplo real →</a>
+      </div>
+
+      <div class="hero__stats animate-in" style="--d:320ms">
+        <div class="stat">
+          <span class="stat__num">15<small>+</small></span>
+          <span class="stat__label">Años de experiencia aplicada</span>
+        </div>
+        <div class="stat__div"></div>
+        <div class="stat">
+          <span class="stat__num">SDD</span>
+          <span class="stat__label">Spec Driven Development</span>
+        </div>
+        <div class="stat__div"></div>
+        <div class="stat">
+          <span class="stat__num">0</span>
+          <span class="stat__label">Sorpresas al escalar</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__deco" aria-hidden="true">
+      <div class="hero__line hero__line--1"></div>
+      <div class="hero__line hero__line--2"></div>
+      <div class="hero__spec-preview animate-in" style="--d:400ms">
+        <div class="spec-card">
+          <div class="spec-card__header">
+            <span class="spec-tag">FS-001 · SC-01</span>
+            <span class="spec-status">Aprobado automáticamente</span>
+          </div>
+          <pre class="spec-card__code"><span class="kw">DADO QUE</span>  usuario con KYC 'pendiente'
+          ha subido cédula con ambas caras
+<span class="kw">CUANDO</span>    verificador devuelve score: <span class="num">87</span>
+          y datos coinciden con declarados
+<span class="kw">ENTONCES</span>  perfil KYC → <span class="ok">'aprobado'</span>
+          notificación email &lt; <span class="num">60</span>s
+          kyc.approved publicado al bus</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S2: EL PROBLEMA -->
+  <section class="section problem" id="problema">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__num" aria-hidden="true">02</span>
+        <div>
+          <p class="section__eyebrow">El problema</p>
+          <h2 class="section__h2">¿Tu código crece,<br/>pero tu equipo lo entiende<br/>cada vez menos?</h2>
+        </div>
+      </div>
+
+      <div class="problem__grid">
+        <div class="problem__pains">
+          <div class="pain reveal">
+            <span class="pain__arrow">→</span>
+            <p>La IA genera código rápido, pero nadie sabe qué rompe qué.</p>
+          </div>
+          <div class="pain reveal">
+            <span class="pain__arrow">→</span>
+            <p>Si el dev que construyó el sistema se va, el conocimiento se va con él.</p>
+          </div>
+          <div class="pain reveal">
+            <span class="pain__arrow">→</span>
+            <p>Pagaste por desarrollo y no puedes auditar ni explicar lo que recibiste.</p>
+          </div>
+          <div class="pain reveal">
+            <span class="pain__arrow">→</span>
+            <p>Los releases se hacen más lentos aunque el equipo trabaja igual.</p>
+          </div>
+          <div class="pain reveal">
+            <span class="pain__arrow">→</span>
+            <p>Un inversor técnico pide ver la arquitectura y nadie puede explicarla.</p>
+          </div>
+        </div>
+
+        <div class="problem__close reveal">
+          <div class="close-block">
+            <p class="close-block__text">
+              Estos problemas tienen un origen común: el sistema se construyó sin una especificación que lo defina primero. La IA genera rápido, pero sin spec genera sin contexto de negocio.
+            </p>
+            <p class="close-block__bridge">
+              Existe una forma de construir software donde cada decisión técnica queda documentada antes de escribir una línea de código.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3: LA SOLUCIÓN -->
+  <section class="section solution" id="solucion">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__num" aria-hidden="true">03</span>
+        <div>
+          <p class="section__eyebrow">La solución</p>
+          <h2 class="section__h2">Spec Driven Development —<br/>la spec define el sistema<br/>antes del código.</h2>
+        </div>
+      </div>
+
+      <p class="solution__def reveal">
+        SDD es la metodología con la que GL Solutions construye software. Cada decisión técnica queda documentada antes de escribir una línea de código. La IA ejecuta lo que la spec ordena — no al revés. El resultado: un sistema que puedes auditar, transferir y escalar sin depender de una sola persona.
+      </p>
+
+      <div class="contrast reveal">
+        <div class="contrast__col contrast__col--bad">
+          <h3 class="contrast__heading">Vibe Coding</h3>
+          <ul class="contrast__list">
+            <li>IA genera código sin contexto de negocio</li>
+            <li>Sin especificaciones → sin trazabilidad</li>
+            <li>Deuda técnica invisible hasta que escala</li>
+            <li>Imposible hacer handoff a otro equipo</li>
+          </ul>
+        </div>
+        <div class="contrast__divider" aria-hidden="true">vs</div>
+        <div class="contrast__col contrast__col--good">
+          <h3 class="contrast__heading">Spec Driven Development</h3>
+          <ul class="contrast__list">
+            <li>La spec define el sistema antes del código</li>
+            <li>La IA implementa lo que la spec ordena</li>
+            <li>Cada decisión técnica queda documentada</li>
+            <li>Cualquier equipo puede continuar el proyecto</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="principles reveal">
+        <div class="principle">
+          <span class="principle__num">01</span>
+          <h4 class="principle__title">Spec antes que código</h4>
+          <p class="principle__desc">Ninguna línea de código sin una especificación que la justifique. La spec es la fuente de verdad del sistema.</p>
+        </div>
+        <div class="principle">
+          <span class="principle__num">02</span>
+          <h4 class="principle__title">La IA obedece, no decide</h4>
+          <p class="principle__desc">Las decisiones de arquitectura, dominio y trade-offs técnicos las toman los ingenieros. Siempre.</p>
+        </div>
+        <div class="principle">
+          <span class="principle__num">03</span>
+          <h4 class="principle__title">Todo artefacto es auditable</h4>
+          <p class="principle__desc">Cualquier ingeniero externo puede entender el sistema leyendo sus artefactos. El handoff limpio no es opcional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4: EVIDENCIA -->
+  <section class="section evidence" id="evidencia">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__num" aria-hidden="true">04</span>
+        <div>
+          <p class="section__eyebrow">Evidencia</p>
+          <h2 class="section__h2">Así se ve un sistema<br/>construido con SDD.</h2>
+        </div>
+      </div>
+
+      <p class="evidence__intro reveal">
+        Este es el artefacto FS-001 — una feature spec completa del flujo de verificación de identidad (KYC) para una plataforma Fintech. Incluye glosario de dominio, máquina de estados, 5 escenarios BDD, 7 edge cases y contrato OpenAPI. Es el nivel de detalle con el que GL Solutions especifica cada feature antes de implementarla.
+      </p>
+
+      <div class="evidence__artifact reveal">
+        <div class="artifact__meta">
+          <div class="artifact__tag">FS-001 · Feature Spec</div>
+          <div class="artifact__tag">F3 — Feature Specification</div>
+          <div class="artifact__tag">Must Have</div>
+        </div>
+        <div class="artifact__title">KYC Onboarding — Verificación de Identidad</div>
+
+        <div class="artifact__body">
+          <div class="artifact__section">
+            <h4 class="artifact__section-title">Máquina de estados</h4>
+            <div class="states">
+              <div class="state state--init">Pendiente</div>
+              <div class="state__arrow">→</div>
+              <div class="state">En proceso</div>
+              <div class="state__arrow">→</div>
+              <div class="state state--ok">Aprobado</div>
+            </div>
+            <div class="states states--row2">
+              <div class="state state--warn">En revisión</div>
+              <div class="state__arrow">→</div>
+              <div class="state state--err">Rechazado</div>
+              <div class="state state--sus">Suspendido</div>
+            </div>
+          </div>
+
+          <div class="artifact__section">
+            <h4 class="artifact__section-title">SC-01 · Aprobación automática</h4>
+            <pre class="bdd"><span class="bdd__kw">DADO QUE</span>  usuario con estado KYC 'pendiente'
+          ha completado el formulario de datos personales
+          y ha subido imagen de cédula con ambas caras visibles
+<span class="bdd__kw">CUANDO</span>    el verificador externo devuelve <span class="bdd__val">score: 87</span>
+          y los datos extraídos coinciden con los declarados
+<span class="bdd__kw">ENTONCES</span>  el perfil KYC cambia a estado <span class="bdd__ok">'aprobado'</span> automáticamente
+          y el usuario recibe notificación por email en menos de <span class="bdd__val">60 segundos</span>
+          y el evento <span class="bdd__ev">kyc.approved</span> es publicado al bus con timestamp
+          y el usuario queda habilitado para realizar transacciones</pre>
+          </div>
+
+          <div class="artifact__section">
+            <h4 class="artifact__section-title">Edge cases registrados (extracto)</h4>
+            <div class="edge-cases">
+              <div class="edge-case">
+                <span class="edge-case__sev edge-case__sev--high">Alta</span>
+                <span class="edge-case__text">RUT del documento ya registrado en otro usuario — alerta inmediata a compliance.</span>
+              </div>
+              <div class="edge-case">
+                <span class="edge-case__sev edge-case__sev--high">Alta</span>
+                <span class="edge-case__text">Webhook del verificador duplicado — sistema idempotente, segundo webhook ignorado.</span>
+              </div>
+              <div class="edge-case">
+                <span class="edge-case__sev edge-case__sev--med">Media</span>
+                <span class="edge-case__text">Nombre con tilde vs sin tilde — comparación normaliza Unicode antes de comparar.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="artifact__footer">
+          <span>ADR-003 · ADR-007 · ADR-011 vinculados</span>
+          <a href="mailto:hola@glsolutions.tech?subject=Quiero ver el artefacto KYC completo" class="artifact__link">
+            Ver el artefacto completo →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5: CÓMO FUNCIONA -->
+  <section class="section process" id="proceso">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__num" aria-hidden="true">05</span>
+        <div>
+          <p class="section__eyebrow">Cómo funciona</p>
+          <h2 class="section__h2">Un proceso en 5 fases.<br/>Cada una tiene una<br/>puerta de calidad.</h2>
+        </div>
+      </div>
+
+      <div class="phases">
+        <div class="phase reveal">
+          <div class="phase__id">F1</div>
+          <div class="phase__content">
+            <h4 class="phase__title">Discovery &amp; Domain Modeling</h4>
+            <p class="phase__desc">Entendemos el negocio antes de tocar el teclado. Glosario de dominio, event map y mapa de actores. El cliente aprueba antes de avanzar.</p>
+            <span class="phase__duration">3–5 días</span>
+          </div>
+        </div>
+        <div class="phase reveal">
+          <div class="phase__id">F2</div>
+          <div class="phase__content">
+            <h4 class="phase__title">Architecture &amp; API Design</h4>
+            <p class="phase__desc">Decidimos la estructura antes de implementarla. ADRs, diagrama C4 y OpenAPI spec. Cada decisión técnica documentada con alternativas descartadas.</p>
+            <span class="phase__duration">4–6 días</span>
+          </div>
+        </div>
+        <div class="phase reveal">
+          <div class="phase__id">F3</div>
+          <div class="phase__content">
+            <h4 class="phase__title">Feature Specification</h4>
+            <p class="phase__desc">Definimos qué hace el sistema antes de construirlo. Criterios BDD, edge cases registrados y contrato de API por feature. El cliente firma el alcance.</p>
+            <span class="phase__duration">3–5 días</span>
+          </div>
+        </div>
+        <div class="phase reveal">
+          <div class="phase__id">F4</div>
+          <div class="phase__content">
+            <h4 class="phase__title">Spec-Guided Implementation</h4>
+            <p class="phase__desc">La IA construye lo que la spec ordena. Code review contra criterios BDD. 100% de criterios de aceptación cubiertos por tests automatizados.</p>
+            <span class="phase__duration">Iterativo</span>
+          </div>
+        </div>
+        <div class="phase reveal">
+          <div class="phase__id">F5</div>
+          <div class="phase__content">
+            <h4 class="phase__title">Validation &amp; Handoff</h4>
+            <p class="phase__desc">Entregamos un sistema que cualquier ingeniero puede operar desde el día uno. UAT firmado, runbook, guía de onboarding y arquitectura viva.</p>
+            <span class="phase__duration">3–4 días</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-note reveal">
+        <div class="ai-note__label">El rol de la IA</div>
+        <p>Usamos IA donde acelera sin perder control. La IA genera borradores de specs, escribe código desde la feature spec y produce tests desde BDD. Las decisiones de arquitectura, la priorización del backlog y la aprobación de que el sistema cumple el negocio las tomamos siempre los ingenieros.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6: PARA QUIÉN ES -->
+  <section class="section icp" id="icp">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__num" aria-hidden="true">06</span>
+        <div>
+          <p class="section__eyebrow">Para quién es</p>
+          <h2 class="section__h2">¿Eres el cliente<br/>correcto para<br/>GL Solutions?</h2>
+        </div>
+      </div>
+
+      <div class="icp__profiles reveal">
+        <div class="profile">
+          <h3 class="profile__title">Founder técnico</h3>
+          <p class="profile__role">CTO / dev lead que también funda</p>
+          <ul class="profile__pains">
+            <li>Usas IA para desarrollar pero el código generado no tiene trazabilidad con tu arquitectura.</li>
+            <li>Tu equipo tarda semanas en escalar porque el onboarding es un caos.</li>
+            <li>Si llegaras a faltar, nadie más entiende el sistema.</li>
+            <li>Los releases se volvieron lentos y nadie sabe por qué.</li>
+          </ul>
+        </div>
+        <div class="profile">
+          <h3 class="profile__title">Founder de negocio</h3>
+          <p class="profile__role">CEO sin perfil técnico profundo</p>
+          <ul class="profile__pains">
+            <li>Pagaste por desarrollo y no puedes auditar, transferir ni explicarle el sistema a un inversor.</li>
+            <li>Los tiempos de entrega siempre se extienden sin explicación clara.</li>
+            <li>Si el equipo actual se va, pierdes todo el conocimiento del sistema.</li>
+            <li>No sabes si tu arquitectura actual va a sobrevivir el crecimiento.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fit reveal">
+        <div class="fit__col fit__col--yes">
+          <h4 class="fit__heading fit__heading--yes">Señales de fit</h4>
+          <ul class="fit__list">
+            <li>Tienes o buscas financiamiento ángel o seed.</li>
+            <li>Tu producto involucra lógica de negocio compleja.</li>
+            <li>Planeas contratar equipo técnico propio en los próximos 6–12 meses.</li>
+            <li>Has tenido malas experiencias con outsourcing previo.</li>
+            <li>Manejas datos de usuarios, transacciones o información regulada.</li>
+            <li>Hablas de escalar — no solo de lanzar el MVP.</li>
+          </ul>
+        </div>
+        <div class="fit__col fit__col--no">
+          <h4 class="fit__heading fit__heading--no">No es para ti si</h4>
+          <ul class="fit__list fit__list--no">
+            <li>Buscas el precio más bajo del mercado.</li>
+            <li>Solo quieres el MVP mínimo y no ves valor en la documentación.</li>
+            <li>Tu proyecto dura menos de 4 semanas.</li>
+            <li>Tu sector es e-commerce sin lógica de negocio compleja.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7: SERVICIOS Y PRECIOS -->
+  <section class="section services" id="servicios">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__num" aria-hidden="true">07</span>
+        <div>
+          <p class="section__eyebrow">Servicios y precios</p>
+          <h2 class="section__h2">Cuatro formas de<br/>trabajar con<br/>GL Solutions.</h2>
+        </div>
+      </div>
+
+      <div class="services__grid">
+        <div class="service reveal">
+          <div class="service__id">01</div>
+          <h3 class="service__title">Ejecución</h3>
+          <p class="service__subtitle">Proyecto SDD completo</p>
+          <p class="service__desc">Desarrollo completo desde la spec hasta el handoff. El cliente recibe un sistema auditado, transferible y con suite de tests. Precio fijo por alcance definido — no por hora.</p>
+          <div class="service__price">
+            <div class="service__price-mask">
+              <span class="service__range">USD 12.000 – 32.000</span>
+              <span class="service__model">precio fijo · 4–10 semanas</span>
+            </div>
+            <a href="mailto:hola@glsolutions.tech?subject=Consulta%20Ejecución%20-%20GL%20Solutions" class="btn btn--gradient service__quote-btn">Escríbenos para cotizar →</a>
+          </div>
+        </div>
+
+        <div class="service reveal">
+          <div class="service__id">02</div>
+          <h3 class="service__title">Rescate</h3>
+          <p class="service__subtitle">Auditoría post-vibe</p>
+          <p class="service__desc">Diagnóstico técnico de un sistema existente con deuda acumulada. Mapa de deuda crítica, plan de migración a SDD y ejecución por fases priorizadas.</p>
+          <div class="service__price">
+            <div class="service__price-mask">
+              <span class="service__range">USD 3.500 – 22.000</span>
+              <span class="service__model">proyecto de duración fija</span>
+            </div>
+            <a href="mailto:hola@glsolutions.tech?subject=Consulta%20Rescate%20-%20GL%20Solutions" class="btn btn--gradient service__quote-btn">Escríbenos para cotizar →</a>
+          </div>
+        </div>
+
+        <div class="service reveal">
+          <div class="service__id">03</div>
+          <h3 class="service__title">Consultoría</h3>
+          <p class="service__subtitle">SDD para tu equipo</p>
+          <p class="service__desc">GL Solutions trabaja junto al equipo técnico del cliente para implementar SDD, revisar arquitectura y elevar la calidad del proceso de desarrollo.</p>
+          <div class="service__price">
+            <div class="service__price-mask">
+              <span class="service__range">USD 1.800 – 4.200 / mes</span>
+              <span class="service__model">retainer · mínimo 3 meses</span>
+            </div>
+            <a href="mailto:hola@glsolutions.tech?subject=Consulta%20Consultoría%20-%20GL%20Solutions" class="btn btn--gradient service__quote-btn">Escríbenos para cotizar →</a>
+          </div>
+        </div>
+
+        <div class="service service--featured reveal">
+          <div class="service__id">04</div>
+          <h3 class="service__title">CTO Fraccionado</h3>
+          <p class="service__subtitle">Liderazgo técnico SDD</p>
+          <p class="service__desc">Decisiones de arquitectura, supervisión de implementación con IA y roadmap técnico. El cliente no necesita contratar un CTO de planilla.</p>
+          <div class="service__price">
+            <div class="service__price-mask">
+              <span class="service__range">USD 2.800 – 11.000 / mes</span>
+              <span class="service__model">retainer · mínimo 3 meses</span>
+            </div>
+            <a href="mailto:hola@glsolutions.tech?subject=Consulta%20CTO%20Fraccionado%20-%20GL%20Solutions" class="btn btn--gradient service__quote-btn">Escríbenos para cotizar →</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="services__note reveal">Los rangos son orientativos. El precio final depende del alcance definido en la primera conversación. No cotizamos sin haber hecho el diagnóstico.</p>
+
+      <div class="services__cta reveal">
+        <a href="mailto:hola@glsolutions.tech?subject=Quiero una propuesta de GL Solutions" class="btn btn--primary">
+          hola@glsolutions.tech
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- S8: CTA FINAL -->
+  <section class="section cta-final" id="contacto">
+    <div class="container">
+      <div class="cta-final__inner">
+        <p class="section__eyebrow cta-final__eyebrow">¿Listo para construir?</p>
+        <h2 class="cta-final__h2">¿Listo para construir<br/>software que puedes auditar?</h2>
+
+        <div class="process-steps reveal">
+          <div class="step">
+            <span class="step__num">01</span>
+            <p class="step__text">Nos escribes a <strong>hola@glsolutions.tech</strong> con una línea sobre tu proyecto.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">02</span>
+            <p class="step__text">Te respondemos en menos de <strong>24 horas</strong> con dos opciones de horario.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">03</span>
+            <p class="step__text">Primera reunión de <strong>30 minutos</strong> — sin pitch, sin precio. Solo diagnóstico.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">04</span>
+            <p class="step__text">Si hay fit, recibes una propuesta con <strong>alcance y precio específico.</strong></p>
+          </div>
+        </div>
+
+        <a href="mailto:hola@glsolutions.tech" class="cta-final__email reveal">
+          hola@glsolutions.tech
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__brand">GL Solutions</span>
+      <span class="footer__copy">© 2025 · Spec Driven Development · Chile &amp; LatAm</span>
+    </div>
+  </footer>
+
+  <script defer src="main.js"></script>
+</body>
+</html>
