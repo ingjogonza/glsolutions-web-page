@@ -1,5 +1,23 @@
 /* main.js — GL Solutions */
 
+// ── Reconstrucción de enlaces mailto ────────────────────────
+// El HTML no contiene "mailto:" literal para evitar que Cloudflare
+// inyecte su script de Email Obfuscation (email-decode.min.js),
+// que bloquea el render. Se reconstruye aquí, en runtime.
+document.querySelectorAll('.js-mailto').forEach(el => {
+  const user = el.getAttribute('data-mail');
+  if (!user) return;
+  let href = 'mailto:' + user;
+  const subject = el.getAttribute('data-subject');
+  const subjectEncoded = el.getAttribute('data-subject-encoded');
+  if (subjectEncoded) {
+    href += '?subject=' + subjectEncoded;
+  } else if (subject) {
+    href += '?subject=' + encodeURIComponent(subject);
+  }
+  el.setAttribute('href', href);
+});
+
 // ── Nav scroll shadow ────────────────────────────────────────
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
