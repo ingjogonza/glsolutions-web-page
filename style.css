@@ -712,6 +712,18 @@ ul { list-style: none; }
   margin-bottom: 16px;
 }
 
+.artifact__plain-note {
+  font-family: var(--f-body);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--c-mid);
+  background: var(--c-bg-alt);
+  border-left: 2px solid var(--c-amber);
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  border-radius: 0 3px 3px 0;
+}
+
 /* States */
 .states {
   display: flex;
@@ -1026,6 +1038,20 @@ ul { list-style: none; }
 }
 .fit__list li::before { content: '✓'; color: #4CAF50; }
 .fit__list--no li::before { content: '✕'; color: var(--c-err); }
+
+.fit--automation {
+  margin-top: 24px;
+}
+
+.fit--automation__label {
+  grid-column: 1 / -1;
+  font-family: var(--f-ui);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--c-amber-d);
+  margin-bottom: 4px;
+}
 
 /* ═══════════════════════════════════════════════════════════
    S7: SERVICIOS

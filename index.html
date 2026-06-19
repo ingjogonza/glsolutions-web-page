@@ -687,6 +687,7 @@ ul { list-style: none; }
 
           <div class="artifact__section">
             <h4 class="artifact__section-title">Escenario 01 · Aprobación automática — qué debe pasar exactamente</h4>
+            <p class="artifact__plain-note">En español simple: si el usuario sube su cédula y el sistema de verificación lo aprueba, queda habilitado para operar en menos de un minuto — sin que nadie del equipo tenga que revisarlo a mano.</p>
             <pre class="bdd"><span class="bdd__kw">DADO QUE</span>  usuario con estado KYC 'pendiente'
           ha completado el formulario de datos personales
           y ha subido imagen de cédula con ambas caras visibles
@@ -707,11 +708,11 @@ ul { list-style: none; }
               </div>
               <div class="edge-case">
                 <span class="edge-case__sev edge-case__sev--high">Alta</span>
-                <span class="edge-case__text">Webhook del verificador duplicado — sistema idempotente, segundo webhook ignorado.</span>
+                <span class="edge-case__text">El sistema externo avisa dos veces que el mismo usuario fue verificado — el sistema reconoce el duplicado y lo ignora, así nunca se procesa dos veces por error.</span>
               </div>
               <div class="edge-case">
                 <span class="edge-case__sev edge-case__sev--med">Media</span>
-                <span class="edge-case__text">Nombre con tilde vs sin tilde — comparación normaliza Unicode antes de comparar.</span>
+                <span class="edge-case__text">Un nombre con tilde y otro sin tilde no deberían contarse como personas distintas — el sistema los reconoce como el mismo nombre antes de comparar.</span>
               </div>
             </div>
           </div>
@@ -851,6 +852,28 @@ ul { list-style: none; }
             <li>Solo quieres el MVP mínimo y no ves valor en la documentación.</li>
             <li>Tu proyecto dura menos de 4 semanas.</li>
             <li>Tu sector es e-commerce sin lógica de negocio compleja.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fit fit--automation reveal">
+        <p class="fit--automation__label">Si tu negocio es una empresa con operación establecida — no una startup —, esto es para ti</p>
+        <div class="fit__col fit__col--yes">
+          <h4 class="fit__heading fit__heading--yes">Señales de fit</h4>
+          <ul class="fit__list">
+            <li>Usas Excel o WhatsApp para coordinar procesos internos.</li>
+            <li>Tienes procesos de reporte manual que consumen más de 4 horas a la semana.</li>
+            <li>Ya intentaste automatizar con herramientas básicas y no funcionó.</li>
+            <li>Te frustran los errores humanos repetidos en la operación diaria.</li>
+            <li>No tienes un equipo técnico propio que pueda construirlo internamente.</li>
+          </ul>
+        </div>
+        <div class="fit__col fit__col--no">
+          <h4 class="fit__heading fit__heading--no">No es para ti si</h4>
+          <ul class="fit__list fit__list--no">
+            <li>Quieres automatizar sin mapear antes cómo funciona tu proceso hoy.</li>
+            <li>Buscas el precio más bajo y no valoras la documentación.</li>
+            <li>Esperas una solución en 48 horas sin una conversación previa.</li>
           </ul>
         </div>
       </div>
