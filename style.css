@@ -1039,28 +1039,6 @@ ul { list-style: none; }
 .fit__list li::before { content: '✓'; color: #4CAF50; }
 .fit__list--no li::before { content: '✕'; color: var(--c-err); }
 
-.fit-divider {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin: 40px 0;
-}
-
-.fit-divider__line {
-  flex: 1;
-  height: 1px;
-  background: var(--c-rule);
-}
-
-.fit-divider__text {
-  font-family: var(--f-ui);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--c-amber-d);
-  white-space: nowrap;
-  text-align: center;
-}
-
 /* ═══════════════════════════════════════════════════════════
    S7: SERVICIOS
    ═══════════════════════════════════════════════════════════ */
@@ -1368,9 +1346,6 @@ ul { list-style: none; }
   .icp__profiles { grid-template-columns: 1fr; }
   .icp__profiles--three { grid-template-columns: 1fr; }
   .fit { grid-template-columns: 1fr; }
-  .fit-divider { flex-direction: column; gap: 8px; margin: 32px 0; }
-  .fit-divider__line { width: 60px; height: 1px; }
-  .fit-divider__text { white-space: normal; text-align: center; }
   .services__grid { grid-template-columns: 1fr; }
   .process-steps { grid-template-columns: 1fr; }
 
